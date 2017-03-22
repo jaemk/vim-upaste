@@ -2,7 +2,7 @@ if !exists("g:upaste_binary")
     let g:upaste_binary = "upaste"
 endif
 
-func! UPaste()
+func! s:UPaste()
     let [lnum1, col1] = getpos("'<")[1:2]
     let [lnum2, col2] = getpos("'>")[1:2]
     let l:nlines = lnum2 - lnum1 + 1
@@ -12,3 +12,5 @@ func! UPaste()
         cexpr paste_resp
     endif
 endfunc
+
+command! UPaste :call s:UPaste()

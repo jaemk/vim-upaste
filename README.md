@@ -7,8 +7,8 @@
 " location of your upaste binary if it's not on your PATH
 g:upaste_binary = "upaste"
 
-" Your binding during visual selection
-vnoremap <C-t> :call <SID>UPaste()<CR>
+" UPaste visual select binding
+vnoremap <C-t> :<C-U>UPaste<CR>
 ```
 
 ## Usage
